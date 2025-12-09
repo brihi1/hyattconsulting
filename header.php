@@ -3,30 +3,15 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Favicon -->
-    <?php if (has_site_icon()) : ?>
-        <?php wp_site_icon(); ?>
-    <?php else : ?>
-        <link rel="icon" type="image/svg+xml" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.svg">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon-16x16.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-touch-icon.png">
-    <?php endif; ?>
-    
-    <!-- Google Calendar Appointment Scheduling -->
-    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-    
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class('min-h-screen bg-black text-zinc-200'); ?>>
 <?php wp_body_open(); ?>
 
 <nav class="navbar">
-    <div class="nav-container">
+    <div class="container navbar-inner">
         <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px; color: var(--color-blue-500);">
                 <path d="M50 5L93.3013 30V80L50 105L6.69873 80V30L50 5Z" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M33 35V75" stroke="currentColor" stroke-width="8" stroke-linecap="round" />
                 <path d="M67 35V75" stroke="currentColor" stroke-width="8" stroke-linecap="round" />
@@ -35,95 +20,56 @@
             HYATT <span class="logo-accent">CONSULTING</span>
         </a>
         
-        <!-- Desktop Navigation -->
         <div class="nav-links">
             <?php if (has_nav_menu('primary')) : ?>
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'primary',
-                    'container' => false,
-                    'items_wrap' => '%3$s',
-                    'fallback_cb' => false,
+                    'container'      => false,
+                    'items_wrap'     => '%3$s',
+                    'walker'         => new Hyatt_Nav_Walker(),
                 ));
                 ?>
             <?php else : ?>
-                <a href="#methodology">Methodology</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
+                <a href="#audit-services" class="nav-link">Audit Services</a>
+                <a href="#aeo-strategy" class="nav-link">AEO Strategy</a>
+                <a href="#fee-analysis" class="nav-link">Fee Analysis</a>
+                <a href="#methodology" class="nav-link">Methodology</a>
             <?php endif; ?>
             
-            <!-- Google Calendar Scheduling Button (Desktop) -->
-            <span class="gcal-booking-btn nav-cta-wrapper"></span>
+            <a href="#contact" class="nav-cta">Book an Audit</a>
         </div>
         
-        <!-- Mobile Menu Button -->
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle menu">
+            <svg id="menu-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg id="menu-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
         </button>
     </div>
     
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
+    <div class="mobile-menu" id="mobile-menu">
         <?php if (has_nav_menu('primary')) : ?>
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'primary',
-                'container' => false,
-                'items_wrap' => '%3$s',
-                'fallback_cb' => false,
+                'container'      => false,
+                'items_wrap'     => '%3$s',
             ));
             ?>
         <?php else : ?>
+            <a href="#audit-services">Audit Services</a>
+            <a href="#aeo-strategy">AEO Strategy</a>
+            <a href="#fee-analysis">Fee Analysis</a>
             <a href="#methodology">Methodology</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
         <?php endif; ?>
-        
-        <!-- Google Calendar Scheduling Button (Mobile) -->
-        <span class="gcal-booking-btn-mobile nav-cta-wrapper"></span>
+        <a href="#contact" class="nav-cta">Book an Audit</a>
     </div>
 </nav>
-
-<!-- Initialize Google Calendar Buttons -->
-<script>
-(function() {
-    function initCalendarButtons() {
-        if (typeof calendar === 'undefined' || !calendar.schedulingButton) {
-            setTimeout(initCalendarButtons, 100);
-            return;
-        }
-        
-        // Desktop button
-        var desktopTarget = document.querySelector('.gcal-booking-btn');
-        if (desktopTarget) {
-            calendar.schedulingButton.load({
-                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0KQr38tBXElPuu4iVDtMhm2zH-ha0sF8-1IwRJU8v11J4gj_gw4xXJFoP1xbIOyGLAjAR90K6u?gv=true',
-                color: '#039BE5',
-                label: 'Book an Audit',
-                target: desktopTarget,
-            });
-        }
-        
-        // Mobile button
-        var mobileTarget = document.querySelector('.gcal-booking-btn-mobile');
-        if (mobileTarget) {
-            calendar.schedulingButton.load({
-                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0KQr38tBXElPuu4iVDtMhm2zH-ha0sF8-1IwRJU8v11J4gj_gw4xXJFoP1xbIOyGLAjAR90K6u?gv=true',
-                color: '#039BE5',
-                label: 'Book an Audit',
-                target: mobileTarget,
-            });
-        }
-    }
-    
-    if (document.readyState === 'complete') {
-        initCalendarButtons();
-    } else {
-        window.addEventListener('load', initCalendarButtons);
-    }
-})();
-</script>
 
 <main>
