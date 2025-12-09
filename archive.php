@@ -1,6 +1,6 @@
 <?php
 /**
- * Main Index Template (Blog)
+ * Archive Template (Categories, Tags, Dates)
  *
  * @package Hyatt_Consulting
  */
@@ -18,22 +18,32 @@ get_header();
     <div class="container hero-content" style="text-align: center;">
         <h1>
             <?php
-            if (is_home()) {
-                echo 'Blog';
+            if (is_category()) {
+                single_cat_title();
+            } elseif (is_tag()) {
+                single_tag_title();
+            } elseif (is_author()) {
+                printf(__('Author: %s', 'hyatt-consulting'), get_the_author());
+            } elseif (is_date()) {
+                if (is_day()) {
+                    printf(__('Daily Archives: %s', 'hyatt-consulting'), get_the_date());
+                } elseif (is_month()) {
+                    printf(__('Monthly Archives: %s', 'hyatt-consulting'), get_the_date('F Y'));
+                } elseif (is_year()) {
+                    printf(__('Yearly Archives: %s', 'hyatt-consulting'), get_the_date('Y'));
+                }
             } else {
-                bloginfo('name');
+                _e('Archives', 'hyatt-consulting');
             }
             ?>
         </h1>
-        <p class="hero-subtitle">
-            <?php
-            if (is_home()) {
-                echo 'Insights and analysis on digital marketing transparency.';
-            } else {
-                bloginfo('description');
-            }
-            ?>
-        </p>
+        <?php
+        if (is_category() && category_description()) {
+            echo '<p class="hero-subtitle">' . wp_kses_post(category_description()) . '</p>';
+        } elseif (is_tag() && tag_description()) {
+            echo '<p class="hero-subtitle">' . wp_kses_post(tag_description()) . '</p>';
+        }
+        ?>
     </div>
 </section>
 
@@ -56,7 +66,7 @@ get_header();
                                 </time>
                                 <?php
                                 $categories = get_the_category();
-                                if ($categories) :
+                                if ($categories && !is_category()) :
                                     ?>
                                     <span class="blog-meta-divider">•</span>
                                     <a href="<?php echo esc_url(get_category_link($categories[0]->term_id)); ?>" class="blog-card-category">
@@ -102,7 +112,7 @@ get_header();
             </div>
         <?php else : ?>
             <div class="blog-no-posts">
-                <p>No posts found. Check back soon for insights on digital marketing transparency.</p>
+                <p><?php _e('No posts found in this archive.', 'hyatt-consulting'); ?></p>
             </div>
         <?php endif; ?>
     </div>
