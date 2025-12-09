@@ -8,19 +8,18 @@
 get_header();
 ?>
 
-<section class="hero" style="min-height: 80vh;">
+<section class="hero" style="min-height: 60vh;">
     <div class="hero-bg">
         <div class="hero-overlay-1"></div>
         <div class="hero-overlay-2"></div>
-        <div class="hero-grid-overlay bg-grid-pattern"></div>
     </div>
     
     <div class="container hero-content" style="text-align: center;">
-        <h1>
-            <span class="gradient-text animate-gradient-x">404</span>
+        <h1 style="font-size: 8rem; margin-bottom: 1rem;">
+            <span class="gradient-text">404</span>
         </h1>
-        <p class="hero-subtitle" style="margin-top: 1rem;">
-            Looks like this page went missing. Even digital detectives can't find everything.
+        <p class="hero-subtitle">
+            The page you're looking for doesn't exist or has been moved.
         </p>
         <div class="hero-buttons" style="justify-content: center; margin-top: 2rem;">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="btn-primary">
