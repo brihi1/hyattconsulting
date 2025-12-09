@@ -70,11 +70,13 @@ The theme automatically creates these pages on activation:
 
 ### 5. Upload Custom Favicon (Optional)
 
-The theme includes a default favicon. To use your own:
+The theme includes a default SVG favicon. To use your own:
 1. Go to **Appearance → Customize → Site Identity**
 2. Click **Select site icon**
-3. Upload your icon (512x512 recommended)
+3. Upload your icon (512x512 PNG recommended)
 4. Click **Publish**
+
+**Note:** WordPress will automatically generate all required favicon formats (ICO, PNG sizes, etc.) from your uploaded image.
 
 ---
 
@@ -84,10 +86,7 @@ The theme includes a default favicon. To use your own:
 hyatt-theme/
 ├── assets/
 │   ├── images/
-│   │   ├── favicon.svg
-│   │   ├── favicon-16x16.png
-│   │   ├── favicon-32x32.png
-│   │   └── apple-touch-icon.png
+│   │   └── favicon.svg
 │   └── js/
 │       └── main.js
 ├── 404.php
