@@ -20,71 +20,39 @@
                 <?php
                 $privacy_page = get_page_by_path('privacy-policy');
                 $terms_page = get_page_by_path('terms-of-service');
-                $cookie_page = get_page_by_path('cookie-policy');
                 ?>
                 <?php if ($privacy_page) : ?>
-                    <a href="<?php echo get_permalink($privacy_page); ?>" class="footer-legal-link">Privacy Policy</a>
-                    <span class="footer-separator">|</span>
+                    <a href="<?php echo esc_url(get_permalink($privacy_page)); ?>" class="footer-legal-link">Privacy Policy</a>
+                <?php else : ?>
+                    <a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>" class="footer-legal-link">Privacy Policy</a>
                 <?php endif; ?>
+                <span class="footer-legal-divider">|</span>
                 <?php if ($terms_page) : ?>
-                    <a href="<?php echo get_permalink($terms_page); ?>" class="footer-legal-link">Terms of Service</a>
-                    <?php if ($cookie_page) : ?><span class="footer-separator">|</span><?php endif; ?>
-                <?php endif; ?>
-                <?php if ($cookie_page) : ?>
-                    <a href="<?php echo get_permalink($cookie_page); ?>" class="footer-legal-link">Cookie Policy</a>
+                    <a href="<?php echo esc_url(get_permalink($terms_page)); ?>" class="footer-legal-link">Terms of Service</a>
+                <?php else : ?>
+                    <a href="<?php echo esc_url(home_url('/terms-of-service/')); ?>" class="footer-legal-link">Terms of Service</a>
                 <?php endif; ?>
             </div>
         </div>
         
         <div class="footer-links">
-            <?php
+            <?php 
             $linkedin = hyatt_get_option('hyatt_social_linkedin', '');
             $twitter = hyatt_get_option('hyatt_social_twitter', '');
-            $email = hyatt_get_option('hyatt_social_email', get_option('admin_email'));
+            $email = hyatt_get_option('hyatt_social_email', 'brian@hyattlabs.com');
             ?>
-            <?php if ($linkedin) : ?>
+            <?php if (!empty($linkedin) && $linkedin !== '#') : ?>
                 <a href="<?php echo esc_url($linkedin); ?>" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
             <?php endif; ?>
-            <?php if ($twitter) : ?>
+            <?php if (!empty($twitter) && $twitter !== '#') : ?>
                 <a href="<?php echo esc_url($twitter); ?>" class="footer-link" target="_blank" rel="noopener">Twitter</a>
             <?php endif; ?>
-            <?php if ($email) : ?>
+            <?php if (!empty($email)) : ?>
                 <a href="mailto:<?php echo esc_attr($email); ?>" class="footer-link">Email</a>
             <?php endif; ?>
         </div>
     </div>
 </footer>
-
-<!-- Cookie Consent Banner -->
-<?php $cookie_page = get_page_by_path('cookie-policy'); ?>
-<div id="cookie-consent-banner" class="cookie-banner" style="display: none;">
-    <div class="cookie-banner-content">
-        <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
-        <div class="cookie-banner-actions">
-            <a href="<?php echo $cookie_page ? esc_url(get_permalink($cookie_page)) : '#'; ?>" class="cookie-learn-more">Learn More</a>
-            <button id="cookie-accept-btn" class="cookie-accept-btn">Accept</button>
-        </div>
-    </div>
-</div>
-
-<script>
-(function() {
-    var banner = document.getElementById('cookie-consent-banner');
-    var acceptBtn = document.getElementById('cookie-accept-btn');
-    
-    if (banner && acceptBtn) {
-        // Check if user already accepted cookies
-        if (!localStorage.getItem('cookieConsent')) {
-            banner.style.display = 'block';
-        }
-        
-        acceptBtn.addEventListener('click', function() {
-            localStorage.setItem('cookieConsent', 'accepted');
-            banner.style.display = 'none';
-        });
-    }
-})();
-</script>
 
 <?php wp_footer(); ?>
 </body>
