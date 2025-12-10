@@ -1,8 +1,8 @@
 <?php
 /**
- * Main Template / Blog Index
+ * Front Page Template
  *
- * This is the fallback template and also used for blog posts listings.
+ * This template is used for the static homepage.
  *
  * @package Hyatt_Consulting
  */
