@@ -1,14 +1,8 @@
 # Hyatt Consulting WordPress Theme
 
-A modern, dark-themed WordPress theme for digital marketing consulting with Google Calendar booking integration, Cookie Policy compliance, and professional design.
+A modern, dark-themed WordPress theme for digital marketing consulting with professional design and customizable content.
 
-## Version 2.0.0
-
-### New Features
-- **Google Calendar Scheduling** - "Book an Audit" button opens appointment scheduler popup
-- **Cookie Policy** - Auto-created page with consent banner for EU/US compliance
-- **Favicon** - Custom H logo favicon across all browsers
-- **Dashboard-Editable Homepage** - Edit hero and methodology sections from WordPress Pages
+## Version 1.0.0
 
 ---
 
@@ -24,41 +18,32 @@ A modern, dark-themed WordPress theme for digital marketing consulting with Goog
 
 ### Method 2: FTP/File Manager
 
-1. Unzip and upload the `hyatt-theme` folder to `/wp-content/themes/`
+1. Unzip and upload the theme folder to `/wp-content/themes/`
 2. Go to **Appearance → Themes** in your WordPress admin
 3. Find "Hyatt Consulting" and click **Activate**
 
 ---
 
-## After Activation
-
-The theme automatically creates these pages on activation:
-- **Home** (set as front page)
-- **Privacy Policy**
-- **Terms of Service**
-- **Cookie Policy**
-
----
-
 ## Configuration
 
-### 1. Edit Homepage Content
+### 1. Configure Hero Section
 
-1. Go to **Pages → Home**
-2. Edit the Hero and Methodology sections using the custom meta boxes
-3. Click **Update**
+1. Go to **Appearance → Customize → Hero Section**
+2. Update the hero title and subtitle
+3. Click **Publish**
 
 ### 2. Configure Stats Section
 
 1. Go to **Appearance → Customize → Stats Section**
-2. Update the values and labels
+2. Update the values and labels for your statistics
 3. Click **Publish**
 
-### 3. Add Social Links
+### 3. Add Social Links & Contact Email
 
 1. Go to **Appearance → Customize → Social Links**
 2. Add your LinkedIn URL, Twitter URL, and contact email
-3. Click **Publish**
+3. This email will be used for the contact form and displayed in legal pages
+4. Click **Publish**
 
 ### 4. Set Up Navigation Menu
 
@@ -68,83 +53,83 @@ The theme automatically creates these pages on activation:
 4. Assign to "Primary Menu" location
 5. Save
 
-### 5. Upload Custom Favicon (Optional)
+### 5. Edit Page Template Content
 
-The theme includes a default favicon. To use your own:
-1. Go to **Appearance → Customize → Site Identity**
-2. Click **Select site icon**
-3. Upload your icon (512x512 recommended)
-4. Click **Publish**
+Several page templates have editable meta boxes. Go to **Pages** and edit:
+- **AEO Strategy** - Answer Engine Optimization service page
+- **Audit Services** - Digital marketing audit services
+- **Fee Analysis** - Agency fee analysis service
+- **Methodology** - Company methodology and principles
+
+Each page has custom meta boxes below the editor where you can customize the content.
 
 ---
 
 ## Theme Structure
 
 ```
-hyatt-theme/
+hyatt-consulting/
 ├── assets/
-│   ├── images/
-│   │   ├── favicon.svg
-│   │   ├── favicon-16x16.png
-│   │   ├── favicon-32x32.png
-│   │   └── apple-touch-icon.png
+│   ├── images/          (add your images here)
 │   └── js/
-│       └── main.js
-├── 404.php
+│       └── main.js      (navigation, forms, animations)
+├── 404.php              (error page)
+├── archive.php          (blog category/tag archives)
 ├── footer.php
-├── front-page.php
-├── functions.php
+├── functions.php        (theme setup, customizer, meta boxes)
 ├── header.php
-├── index.php
-├── page.php
+├── index.php            (homepage template)
+├── page.php             (default page template)
+├── page-aeo-strategy.php
+├── page-audit-services.php
+├── page-fee-analysis.php
+├── page-methodology.php
+├── page-privacy-policy.php
+├── page-terms-of-service.php
 ├── README.md
-└── style.css
+└── style.css            (all theme styles)
 ```
 
 ---
 
 ## Features
 
-### Google Calendar Integration
-- Scheduling button appears in navigation (desktop & mobile)
-- Opens popup overlay - visitors stay on your site
-- Syncs with your Google Calendar availability
+### Contact Form
+- AJAX-powered contact form on homepage
+- Sends inquiries to the email configured in Customizer → Social Links
+- Includes website, monthly spend, focus areas, and message fields
 
-### Cookie Consent
-- Banner appears for first-time visitors
-- "Accept" stores consent in browser
-- Links to auto-generated Cookie Policy page
-- Styled to match dark theme
+### Schema.org Markup
+- Comprehensive structured data for better SEO
+- Organization schema with services and contact info
+- Article schema for blog posts
+- FAQ schema where applicable
+- Breadcrumb navigation
+
+### Custom Page Templates
+- Six specialized service and informational page templates
+- Dashboard-editable content via meta boxes
+- No need to edit PHP code to update content
 
 ### Responsive Design
 - Mobile-first approach
 - Collapsible navigation menu
-- Touch-friendly buttons
+- Touch-friendly buttons and forms
 
 ### Performance
-- Minimal dependencies
-- Optimized CSS animations
-- Lazy-loading ready
+- Minimal dependencies (no jQuery)
+- Optimized vanilla JavaScript
+- Efficient CSS with custom properties
 
 ---
 
 ## Customization
 
-### Change Google Calendar URL
+### Add Images
 
-Edit `header.php` and find these lines (appears twice):
-```javascript
-url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0...',
-```
-Replace with your own Google Calendar appointment scheduling URL.
-
-### Change Calendar Button Text
-
-Edit `header.php` and find:
-```javascript
-label: 'Book an Audit',
-```
-Change to your preferred text.
+Place your images in the `/assets/images/` directory. The theme expects:
+- `hero-bg.jpg` - Hero section background (used across multiple pages)
+- Add any other images as needed and reference them in your content
 
 ### Modify Colors
 
@@ -153,15 +138,22 @@ Edit the CSS variables at the top of `style.css`:
 :root {
     --color-blue-500: #3b82f6;
     --color-indigo-500: #6366f1;
+    --color-zinc-900: #18181b;
     /* etc */
 }
 ```
+
+### Change Contact Form Recipient
+
+1. Go to **Appearance → Customize → Social Links**
+2. Update the Email field
+3. This email receives all contact form submissions
 
 ---
 
 ## Support
 
-For questions or customization requests, contact brian@hyattlabs.com
+For questions or customization requests, configure your contact email in **Appearance → Customize → Social Links**.
 
 ---
 

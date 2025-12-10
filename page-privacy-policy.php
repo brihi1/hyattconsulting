@@ -95,8 +95,9 @@ get_header();
             <h2>Contact Us</h2>
             <p>If you have any questions about this privacy policy or our data practices, please contact us at:</p>
             <p>
+                <?php $contact_email = hyatt_get_option('hyatt_social_email', 'brian@hyattlabs.com'); ?>
                 <strong>Hyatt Consulting</strong><br>
-                Email: <a href="mailto:brian@hyattlabs.com" style="color: var(--color-blue-400);">brian@hyattlabs.com</a>
+                Email: <a href="mailto:<?php echo esc_attr($contact_email); ?>" style="color: var(--color-blue-400);"><?php echo esc_html($contact_email); ?></a>
             </p>
             
         </article>

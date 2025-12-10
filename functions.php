@@ -173,7 +173,7 @@ function hyatt_contact_form_handler() {
     $message = sanitize_textarea_field($_POST['message']);
     
     // Contact form recipient
-    $to = 'brian@hyattlabs.com';
+    $to = hyatt_get_option('hyatt_social_email', 'brian@hyattlabs.com');
     $subject = 'New Audit Request from ' . $website;
     
     $body = "New audit request received:\n\n";
@@ -244,7 +244,7 @@ function hyatt_add_schema_markup() {
             'height' => 512
         ),
         'description' => 'Independent digital marketing auditing and consulting services. We provide Google Ads audits, SEO audits, AEO strategy, CTV/Programmatic reviews, and agency fee analysis.',
-        'email' => 'brian@hyattlabs.com',
+        'email' => hyatt_get_option('hyatt_social_email', 'brian@hyattlabs.com'),
         'foundingDate' => '2024',
         'priceRange' => '$$$$',
         'areaServed' => array(
