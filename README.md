@@ -10,7 +10,7 @@ A modern, dark-themed WordPress theme for digital marketing consulting with prof
 
 ### Method 1: Upload via WordPress Admin (Recommended)
 
-1. Download the `hyatt-theme.zip` file
+1. Download the `hyatt-consulting-theme.zip` file from this repository
 2. Go to **Appearance → Themes** in your WordPress admin
 3. Click **Add New** → **Upload Theme**
 4. Select the ZIP file and click **Install Now**
