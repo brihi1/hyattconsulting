@@ -14,8 +14,9 @@ get_header();
 <section class="hero">
     <div class="hero-bg">
         <img
-            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-background.jpg"
-            alt="Digital performance data visualization"
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/particle-wave.jpg"
+            alt="Data flow visualization"
+            style="opacity: 0.65;"
             class="animate-drift"
         >
         <div class="hero-overlay-1"></div>
@@ -26,14 +27,14 @@ get_header();
     </div>
 
     <div class="container hero-content">
-        <div class="hero-grid">
-            <div>
+        <div class="hero-grid" style="max-width: 900px; margin: 0 auto;">
+            <div style="max-width: 100%;">
                 <h1>
                     Engineered Growth.<br>
                     <span class="gradient-text animate-gradient-x">Verified Results.</span>
                 </h1>
-                <p class="hero-subtitle">
-                    We don't just audit—we execute. From uncovering waste to deploying precision campaigns, Hyatt Consulting delivers full-stack digital performance. Radical transparency meets aggressive execution.
+                <p class="hero-subtitle" style="max-width: 100%;">
+                    We don't just audit—we execute. From uncovering waste to deploying precision campaigns, HyattLabs delivers full-stack digital performance. Radical transparency meets aggressive execution.
                 </p>
 
                 <div class="hero-buttons">
