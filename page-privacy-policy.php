@@ -2,7 +2,7 @@
 /**
  * Template Name: Privacy Policy
  *
- * @package Hyatt_Consulting
+ * @package HyattLabs
  */
 
 get_header();
@@ -29,7 +29,7 @@ get_header();
         <article class="legal-content" style="max-width: 800px; margin: 0 auto; color: var(--color-zinc-300); line-height: 1.8;">
             
             <h2>Introduction</h2>
-            <p>Hyatt Consulting ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you visit our website or use our services.</p>
+            <p>HyattLabs ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you visit our website or use our services.</p>
             
             <h2>Information We Collect</h2>
             <p>We collect information you provide directly to us, including:</p>
@@ -96,7 +96,7 @@ get_header();
             <p>If you have any questions about this privacy policy or our data practices, please contact us at:</p>
             <p>
                 <?php $contact_email = hyatt_get_option('hyatt_social_email', 'brian@hyattlabs.com'); ?>
-                <strong>Hyatt Consulting</strong><br>
+                <strong>HyattLabs</strong><br>
                 Email: <a href="mailto:<?php echo esc_attr($contact_email); ?>" style="color: var(--color-blue-400);"><?php echo esc_html($contact_email); ?></a>
             </p>
             

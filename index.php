@@ -4,7 +4,7 @@
  *
  * This is the fallback template and also used for blog posts listings.
  *
- * @package Hyatt_Consulting
+ * @package HyattLabs
  */
 
 get_header();
@@ -12,7 +12,7 @@ get_header();
 // Get editable content from meta boxes
 $hero_title = hyatt_get_page_meta('_hyatt_hero_title', 'The Truth Behind Your Digital Investment.');
 $hero_subtitle = hyatt_get_page_meta('_hyatt_hero_subtitle', 'Agencies report data. We reveal the truth. As your independent digital detectives, we decode the jargon, verify the spend, and translate complex reports into the radical transparency you need to lead with confidence.');
-$services_intro = hyatt_get_page_meta('_hyatt_services_intro', 'Blind trust costs millions. Hyatt Consulting provides independent auditing for brands who need to verify their agency\'s performance and fee structures.');
+$services_intro = hyatt_get_page_meta('_hyatt_services_intro', 'Blind trust costs millions. HyattLabs provides independent auditing for brands who need to verify their agency\'s performance and fee structures.');
 $contact_title = hyatt_get_page_meta('_hyatt_contact_title', 'Verify Your Agency\'s Performance.');
 $contact_subtitle = hyatt_get_page_meta('_hyatt_contact_subtitle', 'Fill out the form below to request a fee and performance review.');
 ?>
@@ -21,7 +21,7 @@ $contact_subtitle = hyatt_get_page_meta('_hyatt_contact_subtitle', 'Fill out the
 <section class="hero">
     <div class="hero-bg">
         <img 
-            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-bg.jpg" 
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-background.jpg" 
             alt="Abstract digital data visualization with blue and orange particle waves representing marketing analytics" 
             class="animate-drift"
         >

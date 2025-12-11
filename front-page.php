@@ -4,7 +4,7 @@
  *
  * Full-service digital performance consultancy homepage.
  *
- * @package Hyatt_Consulting
+ * @package HyattLabs
  */
 
 get_header();
@@ -14,7 +14,7 @@ get_header();
 <section class="hero">
     <div class="hero-bg">
         <img
-            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-bg.jpg"
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-background.jpg"
             alt="Digital performance data visualization"
             class="animate-drift"
         >
@@ -73,7 +73,7 @@ get_header();
                             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                             <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
-                        Hyper-Targeting Experts
+                        Precision Marketing Experts
                     </span>
                 </div>
             </div>
@@ -145,14 +145,14 @@ get_header();
     </div>
 </section>
 
-<!-- Hyper-Targeting Spotlight -->
+<!-- Precision Marketing Spotlight -->
 <section class="stats" style="padding: 6rem 0;">
     <div class="stats-bg"></div>
     <div class="container" style="position: relative; z-index: 10;">
         <div style="max-width: 1000px; margin: 0 auto;">
             <div style="text-align: center; margin-bottom: 3rem;">
                 <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--color-white); margin-bottom: 1rem;">
-                    Hyper-Targeting That <span class="gradient-text-blue">Actually Works</span>
+                    Precision Marketing That <span class="gradient-text-blue">Actually Works</span>
                 </h2>
                 <p style="color: var(--color-zinc-300); font-size: 1.125rem; max-width: 800px; margin: 0 auto;">
                     Forget demographic guessing. We target households by IP address, physical locations via CTV, and replay venue visits with precision advertising.
@@ -177,8 +177,8 @@ get_header();
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="<?php echo esc_url(home_url('/hyper-targeting')); ?>" class="btn-primary">
-                    Explore Hyper-Targeting
+                <a href="<?php echo esc_url(home_url('/precision-marketing')); ?>" class="btn-primary">
+                    Explore Precision Marketing
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
@@ -202,7 +202,7 @@ get_header();
         </div>
 
         <div class="services-grid" style="grid-template-columns: repeat(2, 1fr);">
-            <!-- Service 1: Hyper-Targeting -->
+            <!-- Service 1: Precision Marketing -->
             <div class="service-card">
                 <div class="service-card-border"></div>
                 <div class="service-card-corner-tl"></div>
@@ -216,9 +216,9 @@ get_header();
                         <circle cx="12" cy="12" r="2"></circle>
                     </svg>
                 </div>
-                <h3>Hyper-Targeting</h3>
+                <h3>Precision Marketing</h3>
                 <p>IP targeting, CTV, venue replay, and household-level precision. We don't guess—we know exactly who sees your ads.</p>
-                <a href="<?php echo esc_url(home_url('/hyper-targeting')); ?>" class="service-card-link">
+                <a href="<?php echo esc_url(home_url('/precision-marketing')); ?>" class="service-card-link">
                     Learn More
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -368,8 +368,8 @@ get_header();
                     <label class="lead-form-label">I'm interested in:</label>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
                         <label style="display: flex; align-items: center; gap: 0.5rem; color: var(--color-zinc-300); cursor: pointer;">
-                            <input type="checkbox" name="focus[]" value="hyper-targeting" style="width: 18px; height: 18px;">
-                            Hyper-Targeting
+                            <input type="checkbox" name="focus[]" value="precision-marketing" style="width: 18px; height: 18px;">
+                            Precision Marketing
                         </label>
                         <label style="display: flex; align-items: center; gap: 0.5rem; color: var(--color-zinc-300); cursor: pointer;">
                             <input type="checkbox" name="focus[]" value="audits" style="width: 18px; height: 18px;">

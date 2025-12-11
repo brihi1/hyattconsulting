@@ -1,8 +1,8 @@
 <?php
 /**
- * Hyatt Consulting Theme Functions
+ * HyattLabs Theme Functions
  *
- * @package Hyatt_Consulting
+ * @package HyattLabs
  */
 
 if (!defined('ABSPATH')) {
@@ -34,8 +34,8 @@ function hyatt_theme_setup() {
     
     // Register navigation menus
     register_nav_menus(array(
-        'primary' => __('Primary Menu', 'hyatt-consulting'),
-        'footer'  => __('Footer Menu', 'hyatt-consulting'),
+        'primary' => __('Primary Menu', 'hyattlabs'),
+        'footer'  => __('Footer Menu', 'hyattlabs'),
     ));
 }
 add_action('after_setup_theme', 'hyatt_theme_setup');
@@ -83,7 +83,7 @@ add_action('wp_enqueue_scripts', 'hyatt_enqueue_scripts');
 function hyatt_customize_register($wp_customize) {
     // Hero Section
     $wp_customize->add_section('hyatt_hero_settings', array(
-        'title'    => __('Hero Section', 'hyatt-consulting'),
+        'title'    => __('Hero Section', 'hyattlabs'),
         'priority' => 31,
     ));
     
@@ -93,7 +93,7 @@ function hyatt_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_control('hyatt_hero_title', array(
-        'label'   => __('Hero Title', 'hyatt-consulting'),
+        'label'   => __('Hero Title', 'hyattlabs'),
         'section' => 'hyatt_hero_settings',
         'type'    => 'text',
     ));
@@ -104,14 +104,14 @@ function hyatt_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_control('hyatt_hero_subtitle', array(
-        'label'   => __('Hero Subtitle', 'hyatt-consulting'),
+        'label'   => __('Hero Subtitle', 'hyattlabs'),
         'section' => 'hyatt_hero_settings',
         'type'    => 'textarea',
     ));
     
     // Stats Section
     $wp_customize->add_section('hyatt_stats_settings', array(
-        'title'    => __('Stats Section', 'hyatt-consulting'),
+        'title'    => __('Stats Section', 'hyattlabs'),
         'priority' => 32,
     ));
     
@@ -137,7 +137,7 @@ function hyatt_customize_register($wp_customize) {
     
     // Social Links
     $wp_customize->add_section('hyatt_social_settings', array(
-        'title'    => __('Social Links', 'hyatt-consulting'),
+        'title'    => __('Social Links', 'hyattlabs'),
         'priority' => 33,
     ));
     
@@ -227,14 +227,14 @@ function hyatt_add_schema_markup() {
     $site_name = get_bloginfo('name');
     $site_url = home_url('/');
     $site_description = get_bloginfo('description');
-    $logo_url = get_template_directory_uri() . '/assets/images/logo.png';
+    $logo_url = get_template_directory_uri() . '/assets/images/hyattlabs-logo.png';
     
     // Organization Schema
     $organization_schema = array(
         '@context' => 'https://schema.org',
         '@type' => 'ProfessionalService',
         '@id' => $site_url . '#organization',
-        'name' => 'Hyatt Consulting',
+        'name' => 'HyattLabs',
         'alternateName' => 'Hyatt Companies, L.L.C.',
         'url' => $site_url,
         'logo' => array(
@@ -437,7 +437,7 @@ function hyatt_add_schema_markup() {
             '@type' => 'Article',
             'headline' => get_the_title(),
             'description' => has_excerpt() ? get_the_excerpt() : wp_trim_words(get_the_content(), 30, '...'),
-            'image' => has_post_thumbnail() ? get_the_post_thumbnail_url(null, 'full') : $site_url . '/wp-content/themes/hyatt-theme/assets/images/hero-bg.jpg',
+            'image' => has_post_thumbnail() ? get_the_post_thumbnail_url(null, 'full') : $site_url . '/wp-content/themes/hyatt-theme/assets/images/hero-background.jpg',
             'datePublished' => get_the_date('c'),
             'dateModified' => get_the_modified_date('c'),
             'author' => array(
@@ -474,7 +474,7 @@ function hyatt_add_schema_markup() {
         $blog_schema = array(
             '@context' => 'https://schema.org',
             '@type' => 'Blog',
-            'name' => 'Hyatt Consulting Insights & Analysis',
+            'name' => 'HyattLabs Insights & Analysis',
             'description' => 'Expert insights on digital marketing auditing, agency accountability, Google Ads optimization, SEO strategy, and the evolving landscape of AEO and paid media.',
             'url' => get_permalink(get_option('page_for_posts')),
             'publisher' => array(
@@ -530,7 +530,7 @@ function hyatt_add_meta_tags() {
     $description = '';
     
     if (is_front_page()) {
-        $title = 'Independent Digital Marketing Audits | Hyatt Consulting';
+        $title = 'Independent Digital Marketing Audits | HyattLabs';
         $description = 'Is your agency wasting your ad spend? Get an independent audit of your Google Ads, SEO, CTV, and agency fees. We reveal the truth behind your digital investment.';
     } elseif (is_page_template('page-audit-services.php')) {
         $title = 'Digital Marketing Audit Services | Google Ads, SEO, CTV & More';
@@ -545,26 +545,26 @@ function hyatt_add_meta_tags() {
         $title = 'Our Audit Methodology | Independent, Transparent, Actionable';
         $description = 'No agency relationships. No referral fees. Just the truth about your digital marketing performance. Learn how our independent audits deliver real accountability.';
     } elseif (is_page_template('page-privacy-policy.php')) {
-        $title = 'Privacy Policy | Hyatt Consulting';
-        $description = 'Learn how Hyatt Consulting collects, uses, and protects your personal information. We are committed to safeguarding your privacy.';
+        $title = 'Privacy Policy | HyattLabs';
+        $description = 'Learn how HyattLabs collects, uses, and protects your personal information. We are committed to safeguarding your privacy.';
     } elseif (is_page_template('page-terms-of-service.php')) {
-        $title = 'Terms of Service | Hyatt Consulting';
-        $description = 'Terms and conditions for using Hyatt Consulting\'s website and digital marketing audit services.';
+        $title = 'Terms of Service | HyattLabs';
+        $description = 'Terms and conditions for using HyattLabs\'s website and digital marketing audit services.';
     } elseif (is_home() || is_category() || is_tag() || is_author()) {
-        $title = 'Insights & Analysis | Digital Marketing Audit Blog | Hyatt Consulting';
+        $title = 'Insights & Analysis | Digital Marketing Audit Blog | HyattLabs';
         $description = 'Expert insights on digital marketing auditing, agency accountability, Google Ads optimization, SEO strategy, and the evolving landscape of AEO and paid media.';
         if (is_category()) {
-            $title = single_cat_title('', false) . ' | Hyatt Consulting Blog';
+            $title = single_cat_title('', false) . ' | HyattLabs Blog';
             $description = category_description() ?: $description;
         } elseif (is_tag()) {
-            $title = single_tag_title('', false) . ' | Hyatt Consulting Blog';
+            $title = single_tag_title('', false) . ' | HyattLabs Blog';
             $description = tag_description() ?: $description;
         }
     } elseif (is_single()) {
-        $title = get_the_title() . ' | Hyatt Consulting';
+        $title = get_the_title() . ' | HyattLabs';
         $description = has_excerpt() ? get_the_excerpt() : wp_trim_words(get_the_content(), 30, '...');
     } elseif (is_404()) {
-        $title = 'Page Not Found | Hyatt Consulting';
+        $title = 'Page Not Found | HyattLabs';
         $description = 'The page you\'re looking for doesn\'t exist. Return to our homepage to learn about our independent digital marketing audit services.';
     } else {
         $title = wp_get_document_title();
@@ -578,16 +578,16 @@ function hyatt_add_meta_tags() {
     echo '<meta property="og:title" content="' . esc_attr($title) . '">' . "\n";
     echo '<meta property="og:description" content="' . esc_attr($description) . '">' . "\n";
     echo '<meta property="og:url" content="' . esc_url(get_permalink()) . '">' . "\n";
-    echo '<meta property="og:site_name" content="Hyatt Consulting">' . "\n";
+    echo '<meta property="og:site_name" content="HyattLabs">' . "\n";
     echo '<meta property="og:type" content="website">' . "\n";
-    echo '<meta property="og:image" content="' . esc_url(get_template_directory_uri() . '/assets/images/hero-bg.jpg') . '">' . "\n";
+    echo '<meta property="og:image" content="' . esc_url(get_template_directory_uri() . '/assets/images/hero-background.jpg') . '">' . "\n";
     echo '<meta property="og:locale" content="en_US">' . "\n";
     
     // Twitter Card tags
     echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
     echo '<meta name="twitter:title" content="' . esc_attr($title) . '">' . "\n";
     echo '<meta name="twitter:description" content="' . esc_attr($description) . '">' . "\n";
-    echo '<meta name="twitter:image" content="' . esc_url(get_template_directory_uri() . '/assets/images/hero-bg.jpg') . '">' . "\n";
+    echo '<meta name="twitter:image" content="' . esc_url(get_template_directory_uri() . '/assets/images/hero-background.jpg') . '">' . "\n";
     
     // Additional SEO meta tags
     echo '<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">' . "\n";
@@ -600,7 +600,7 @@ add_action('wp_head', 'hyatt_add_meta_tags', 1);
  */
 function hyatt_custom_document_title($title) {
     if (is_front_page()) {
-        return 'Independent Digital Marketing Audits | Hyatt Consulting';
+        return 'Independent Digital Marketing Audits | HyattLabs';
     } elseif (is_page_template('page-audit-services.php')) {
         return 'Digital Marketing Audit Services | Google Ads, SEO, CTV & More';
     } elseif (is_page_template('page-aeo-strategy.php')) {
@@ -610,19 +610,19 @@ function hyatt_custom_document_title($title) {
     } elseif (is_page_template('page-methodology.php')) {
         return 'Our Audit Methodology | Independent, Transparent, Actionable';
     } elseif (is_page_template('page-privacy-policy.php')) {
-        return 'Privacy Policy | Hyatt Consulting';
+        return 'Privacy Policy | HyattLabs';
     } elseif (is_page_template('page-terms-of-service.php')) {
-        return 'Terms of Service | Hyatt Consulting';
+        return 'Terms of Service | HyattLabs';
     } elseif (is_home()) {
-        return 'Insights & Analysis | Digital Marketing Audit Blog | Hyatt Consulting';
+        return 'Insights & Analysis | Digital Marketing Audit Blog | HyattLabs';
     } elseif (is_category()) {
-        return single_cat_title('', false) . ' | Hyatt Consulting Blog';
+        return single_cat_title('', false) . ' | HyattLabs Blog';
     } elseif (is_tag()) {
-        return single_tag_title('', false) . ' | Hyatt Consulting Blog';
+        return single_tag_title('', false) . ' | HyattLabs Blog';
     } elseif (is_single()) {
-        return get_the_title() . ' | Hyatt Consulting';
+        return get_the_title() . ' | HyattLabs';
     } elseif (is_404()) {
-        return 'Page Not Found | Hyatt Consulting';
+        return 'Page Not Found | HyattLabs';
     }
     return $title;
 }
@@ -707,7 +707,7 @@ function hyatt_homepage_meta_box_callback($post) {
     // Get saved values with defaults
     $hero_title = get_post_meta($post->ID, '_hyatt_hero_title', true) ?: 'The Truth Behind Your Digital Investment.';
     $hero_subtitle = get_post_meta($post->ID, '_hyatt_hero_subtitle', true) ?: 'Agencies report data. We reveal the truth. As your independent digital detectives, we decode the jargon, verify the spend, and translate complex reports into the radical transparency you need to lead with confidence.';
-    $services_intro = get_post_meta($post->ID, '_hyatt_services_intro', true) ?: 'Blind trust costs millions. Hyatt Consulting provides independent auditing for brands who need to verify their agency\'s performance and fee structures.';
+    $services_intro = get_post_meta($post->ID, '_hyatt_services_intro', true) ?: 'Blind trust costs millions. HyattLabs provides independent auditing for brands who need to verify their agency\'s performance and fee structures.';
     $contact_title = get_post_meta($post->ID, '_hyatt_contact_title', true) ?: 'Verify Your Agency\'s Performance.';
     $contact_subtitle = get_post_meta($post->ID, '_hyatt_contact_subtitle', true) ?: 'Fill out the form below to request a fee and performance review.';
     

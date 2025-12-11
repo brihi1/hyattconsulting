@@ -1,4 +1,4 @@
-# Hyatt Consulting WordPress Theme
+# HyattLabs WordPress Theme
 
 A modern, dark-themed WordPress theme for digital marketing consulting with professional design and customizable content.
 
@@ -10,7 +10,7 @@ A modern, dark-themed WordPress theme for digital marketing consulting with prof
 
 ### Method 1: Upload via WordPress Admin (Recommended)
 
-1. Download the `hyatt-consulting-theme.zip` file from this repository
+1. Download the `hyattlabs-theme.zip` file from this repository
 2. Go to **Appearance → Themes** in your WordPress admin
 3. Click **Add New** → **Upload Theme**
 4. Select the ZIP file and click **Install Now**
@@ -20,7 +20,7 @@ A modern, dark-themed WordPress theme for digital marketing consulting with prof
 
 1. Unzip and upload the theme folder to `/wp-content/themes/`
 2. Go to **Appearance → Themes** in your WordPress admin
-3. Find "Hyatt Consulting" and click **Activate**
+3. Find "HyattLabs" and click **Activate**
 
 ---
 
@@ -68,7 +68,7 @@ Each page has custom meta boxes below the editor where you can customize the con
 ## Theme Structure
 
 ```
-hyatt-consulting/
+hyattlabs/
 ├── assets/
 │   ├── images/          (add your images here)
 │   └── js/
@@ -128,7 +128,7 @@ hyatt-consulting/
 ### Add Images
 
 Place your images in the `/assets/images/` directory. The theme expects:
-- `hero-bg.jpg` - Hero section background (used across multiple pages)
+- `hero-background.jpg` - Hero section background (used across multiple pages)
 - Add any other images as needed and reference them in your content
 
 ### Modify Colors

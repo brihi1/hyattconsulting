@@ -2,7 +2,7 @@
 /**
  * Template Name: Web & Organic Growth
  *
- * @package Hyatt_Consulting
+ * @package HyattLabs
  */
 
 get_header();
@@ -12,7 +12,7 @@ get_header();
 <section class="hero" style="min-height: 60vh;">
     <div class="hero-bg">
         <img
-            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-bg.jpg"
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-background.jpg"
             alt="SEO and organic growth strategies"
             class="animate-drift"
         >

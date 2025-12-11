@@ -2,7 +2,7 @@
 /**
  * Template Name: Consulting & Audits
  *
- * @package Hyatt_Consulting
+ * @package HyattLabs
  */
 
 get_header();
@@ -12,7 +12,7 @@ get_header();
 <section class="hero" style="min-height: 60vh;">
     <div class="hero-bg">
         <img
-            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-bg.jpg"
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-background.jpg"
             alt="Digital marketing auditing and consulting"
             class="animate-drift"
         >
@@ -86,27 +86,6 @@ get_header();
                     <li style="margin-bottom: 0.5rem;">✓ Hidden markup identification</li>
                     <li style="margin-bottom: 0.5rem;">✓ Contract renegotiation strategy</li>
                     <li style="margin-bottom: 0.5rem;">✓ Alternative vendor pricing</li>
-                </ul>
-            </div>
-
-            <!-- CTV / Programmatic Audit -->
-            <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 2.5rem;">
-                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-blue-600), var(--color-indigo-600)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
-                        <polyline points="17 2 12 7 7 2"></polyline>
-                    </svg>
-                </div>
-                <h3 style="color: var(--color-white); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">CTV & Programmatic Audits</h3>
-                <p style="color: var(--color-zinc-300); margin-bottom: 1.5rem; line-height: 1.7;">
-                    Are your CTV ads running on premium networks or cheap junk inventory? We verify log files, audit supply paths, and expose vendor fraud.
-                </p>
-                <ul style="color: var(--color-zinc-400); font-size: 0.95rem; line-height: 1.8; list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.5rem;">✓ Inventory quality verification</li>
-                    <li style="margin-bottom: 0.5rem;">✓ Supply path optimization</li>
-                    <li style="margin-bottom: 0.5rem;">✓ Fraud detection & bot traffic</li>
-                    <li style="margin-bottom: 0.5rem;">✓ Viewability & completion rates</li>
-                    <li style="margin-bottom: 0.5rem;">✓ Vendor fee transparency</li>
                 </ul>
             </div>
 

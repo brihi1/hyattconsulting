@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Hyper-Targeting
+ * Template Name: Precision Marketing
  *
- * @package Hyatt_Consulting
+ * @package HyattLabs
  */
 
 get_header();
@@ -12,8 +12,8 @@ get_header();
 <section class="hero" style="min-height: 60vh;">
     <div class="hero-bg">
         <img
-            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-bg.jpg"
-            alt="Hyper-Targeting precision advertising"
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-background.jpg"
+            alt="Precision Marketing precision advertising"
             class="animate-drift"
         >
         <div class="hero-overlay-1"></div>
@@ -23,7 +23,7 @@ get_header();
 
     <div class="container hero-content" style="text-align: center;">
         <h1>
-            Hyper-Targeting<br>
+            Precision Marketing<br>
             <span class="gradient-text">Precision at the Household Level</span>
         </h1>
         <p class="hero-subtitle">
@@ -280,7 +280,7 @@ get_header();
                 <h2>
                     Ready to Target <span class="gradient-text-blue-indigo">with Precision</span>?
                 </h2>
-                <p>Let's discuss which hyper-targeting strategy fits your business.</p>
+                <p>Let's discuss which precision-marketing strategy fits your business.</p>
             </div>
 
             <div style="text-align: center;">

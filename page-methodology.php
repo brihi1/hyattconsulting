@@ -2,7 +2,7 @@
 /**
  * Template Name: Methodology
  *
- * @package Hyatt_Consulting
+ * @package HyattLabs
  */
 
 get_header();
@@ -12,8 +12,8 @@ get_header();
 <section class="hero" style="min-height: 60vh;">
     <div class="hero-bg">
         <img
-            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-bg.jpg"
-            alt="Hyatt Consulting methodology"
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-background.jpg"
+            alt="HyattLabs methodology"
             class="animate-drift"
         >
         <div class="hero-overlay-1"></div>
@@ -47,7 +47,7 @@ get_header();
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
             <!-- Phase 1 -->
             <div style="background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 1rem; padding: 2.5rem; text-align: center;">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-blue-600), var(--color-indigo-600)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; font-weight: 700; color: white;">1</div>
+                <div style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; font-weight: 700; color: var(--color-blue-400);">1</div>
                 <h3 style="color: var(--color-blue-400); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Audit</h3>
                 <p style="color: var(--color-zinc-300); line-height: 1.7;">
                     We diagnose what's broken. Wasted spend, poor account structure, broken tracking, missed opportunities—we find it all.
@@ -56,7 +56,7 @@ get_header();
 
             <!-- Phase 2 -->
             <div style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 1rem; padding: 2.5rem; text-align: center;">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-indigo-600), var(--color-purple-600)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; font-weight: 700; color: white;">2</div>
+                <div style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; font-weight: 700; color: var(--color-indigo-400);">2</div>
                 <h3 style="color: var(--color-indigo-400); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Strategy</h3>
                 <p style="color: var(--color-zinc-300); line-height: 1.7;">
                     We build the plan. Channel mix, targeting strategy, budget allocation, KPIs, and a roadmap for growth.
@@ -65,7 +65,7 @@ get_header();
 
             <!-- Phase 3 -->
             <div style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 1rem; padding: 2.5rem; text-align: center;">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-purple-600), var(--color-pink-600)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; font-weight: 700; color: white;">3</div>
+                <div style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; font-weight: 700; color: var(--color-purple-400);">3</div>
                 <h3 style="color: var(--color-purple-400); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Execute</h3>
                 <p style="color: var(--color-zinc-300); line-height: 1.7;">
                     We deploy the campaigns. Build accounts, launch tests, optimize relentlessly, and report transparently.

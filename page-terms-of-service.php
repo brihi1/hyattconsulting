@@ -2,7 +2,7 @@
 /**
  * Template Name: Terms of Service
  *
- * @package Hyatt_Consulting
+ * @package HyattLabs
  */
 
 get_header();
@@ -29,10 +29,10 @@ get_header();
         <article class="legal-content" style="max-width: 800px; margin: 0 auto; color: var(--color-zinc-300); line-height: 1.8;">
             
             <h2>Agreement to Terms</h2>
-            <p>By accessing or using the Hyatt Consulting website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or services.</p>
+            <p>By accessing or using the HyattLabs website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or services.</p>
             
             <h2>Description of Services</h2>
-            <p>Hyatt Consulting provides independent digital marketing auditing and consulting services, including but not limited to:</p>
+            <p>HyattLabs provides independent digital marketing auditing and consulting services, including but not limited to:</p>
             <ul>
                 <li>Google Ads and PPC audits</li>
                 <li>Search Engine Optimization (SEO) audits</li>
@@ -52,7 +52,7 @@ get_header();
             </ul>
             
             <h2>Intellectual Property</h2>
-            <p>All content on this website, including text, graphics, logos, and images, is the property of Hyatt Consulting or its content suppliers and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.</p>
+            <p>All content on this website, including text, graphics, logos, and images, is the property of HyattLabs or its content suppliers and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.</p>
             
             <h2>Client Responsibilities</h2>
             <p>When engaging our services, you agree to:</p>
@@ -67,7 +67,7 @@ get_header();
             <p>We maintain strict confidentiality regarding all client information, data, and audit findings. We will not disclose your information to third parties without your consent, except as required by law. Specific confidentiality terms will be outlined in our engagement agreements.</p>
             
             <h2>Independence</h2>
-            <p>Hyatt Consulting operates independently and does not:</p>
+            <p>HyattLabs operates independently and does not:</p>
             <ul>
                 <li>Accept referral fees from agencies or vendors</li>
                 <li>Maintain partnerships that could create conflicts of interest</li>
@@ -76,13 +76,13 @@ get_header();
             
             <h2>Limitation of Liability</h2>
             <p>Our audit findings and recommendations are based on the information available to us at the time of the engagement. While we strive for accuracy, we cannot guarantee specific outcomes or results from implementing our recommendations.</p>
-            <p>To the maximum extent permitted by law, Hyatt Consulting shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.</p>
+            <p>To the maximum extent permitted by law, HyattLabs shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.</p>
             
             <h2>Disclaimer of Warranties</h2>
             <p>Our website and services are provided "as is" without warranties of any kind, either express or implied. We do not warrant that our website will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
             
             <h2>Indemnification</h2>
-            <p>You agree to indemnify and hold harmless Hyatt Consulting and its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from your use of our services or violation of these terms.</p>
+            <p>You agree to indemnify and hold harmless HyattLabs and its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from your use of our services or violation of these terms.</p>
             
             <h2>Governing Law</h2>
             <p>These Terms of Service shall be governed by and construed in accordance with the laws of the United States, without regard to conflict of law principles.</p>
@@ -97,7 +97,7 @@ get_header();
             <p>For questions about these Terms of Service, please contact us at:</p>
             <p>
                 <?php $contact_email = hyatt_get_option('hyatt_social_email', 'brian@hyattlabs.com'); ?>
-                <strong>Hyatt Consulting</strong><br>
+                <strong>HyattLabs</strong><br>
                 Email: <a href="mailto:<?php echo esc_attr($contact_email); ?>" style="color: var(--color-blue-400);"><?php echo esc_html($contact_email); ?></a>
             </p>
             

@@ -1,7 +1,7 @@
 /**
- * Hyatt Consulting Theme JavaScript
+ * HyattLabs Theme JavaScript
  * 
- * @package Hyatt_Consulting
+ * @package HyattLabs
  */
 
 (function() {

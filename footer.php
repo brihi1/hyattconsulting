@@ -9,12 +9,12 @@
                 <path d="M67 35V75" stroke="currentColor" stroke-width="8" stroke-linecap="round" />
                 <path d="M33 55H67" stroke="currentColor" stroke-width="8" stroke-linecap="round" />
             </svg>
-            HYATT <span class="logo-accent">CONSULTING</span>
+            HYATT<span class="logo-accent">LABS</span>
         </a>
         
         <div class="footer-legal">
             <div class="footer-copyright">
-                &copy; <?php echo date('Y'); ?> HYATT CONSULTING. Hyatt Companies, L.L.C.
+                &copy; <?php echo date('Y'); ?> HYATTLABS. Hyatt Companies, L.L.C.
             </div>
             <div class="footer-legal-links">
                 <?php
