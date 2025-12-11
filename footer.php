@@ -39,7 +39,7 @@
             <?php 
             $linkedin = hyatt_get_option('hyatt_social_linkedin', '');
             $twitter = hyatt_get_option('hyatt_social_twitter', '');
-            $email = hyatt_get_option('hyatt_social_email', 'brian@hyattlabs.com');
+            $email = hyatt_get_option('hyatt_social_email', 'info@hyattlabs.com');
             ?>
             <?php if (!empty($linkedin) && $linkedin !== '#') : ?>
                 <a href="<?php echo esc_url($linkedin); ?>" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>

@@ -2184,3 +2184,178 @@ img {
 .post-nav-link:hover .post-nav-title {
   color: var(--color-blue-400);
 }
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+/* Mobile: 0-640px */
+@media (max-width: 640px) {
+  /* Hero Section */
+  .hero {
+    min-height: 70vh;
+  }
+
+  .container.hero-content {
+    padding: 0 1.5rem !important;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+    max-width: 100% !important;
+    margin: 0 auto 2rem !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-badges {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .hero-badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Header/Nav */
+  .header {
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Service Cards */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  /* Stats */
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  /* Four Pillars - Stack on mobile */
+  div[style*="grid-template-columns: repeat(4, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Three Phases - Stack on mobile */
+  div[style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Two Column Grids - Stack on mobile */
+  div[style*="grid-template-columns: repeat(2, 1fr)"],
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Table Grids - Stack on mobile */
+  div[style*="grid-template-columns: 200px 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  div[style*="grid-template-columns: 200px 1fr 1fr"] > div {
+    padding: 1rem !important;
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Sections */
+  .services,
+  .stats,
+  .lead-form-section {
+    padding: 3rem 0;
+  }
+
+  /* Typography */
+  h2 {
+    font-size: 1.875rem !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+  }
+
+  /* Container */
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Tablet: 641px-1024px */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container.hero-content {
+    padding: 0 2rem !important;
+  }
+
+  .hero h1 {
+    font-size: 3rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem !important;
+  }
+
+  /* Four Pillars - 2 columns on tablet */
+  div[style*="grid-template-columns: repeat(4, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Three Phases - keep 3 columns but reduce gap */
+  div[style*="grid-template-columns: repeat(3, 1fr)"] {
+    gap: 1.5rem !important;
+  }
+}
+
+/* Small Screens - Additional adjustments */
+@media (max-width: 768px) {
+  /* Hide complex background effects on mobile for performance */
+  .hero-glow,
+  .service-card-glow {
+    display: none;
+  }
+
+  /* Simplify animations on mobile */
+  .animate-drift,
+  .animate-pulse,
+  .animate-gradient-x {
+    animation: none !important;
+  }
+
+  /* Lead Form */
+  .lead-form-header h2 {
+    font-size: 1.875rem !important;
+  }
+
+  /* Footer */
+  .footer-inner {
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

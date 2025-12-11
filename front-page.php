@@ -26,14 +26,14 @@ get_header();
         <div class="hero-glow hero-glow-2"></div>
     </div>
 
-    <div class="container hero-content" style="max-width: 1400px;">
+    <div class="container hero-content" style="max-width: 100%; padding: 0 3rem;">
         <div class="hero-grid" style="max-width: 100%; text-align: center;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h1 style="font-size: 3.5rem; line-height: 1.2;">
+            <div style="max-width: 1400px; margin: 0 auto; width: 100%;">
+                <h1 style="font-size: 4rem; line-height: 1.2; margin-bottom: 2rem;">
                     Engineered Growth.<br>
                     <span class="gradient-text animate-gradient-x">Verified Results.</span>
                 </h1>
-                <p class="hero-subtitle" style="max-width: 900px; margin: 1.5rem auto 2.5rem; font-size: 1.25rem;">
+                <p class="hero-subtitle" style="max-width: 1100px; margin: 0 auto 3rem; font-size: 1.35rem; line-height: 1.6;">
                     We don't just audit—we execute. From uncovering waste to deploying precision campaigns, HyattLabs delivers full-stack digital performance. Radical transparency meets aggressive execution.
                 </p>
 
