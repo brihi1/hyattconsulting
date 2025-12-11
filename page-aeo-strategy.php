@@ -222,28 +222,49 @@ $what_is_aeo = hyatt_get_page_meta('_hyatt_aeo_what_is', 'Answer Engine Optimiza
                 AEO doesn't replace SEO—it extends it. Here's how the strategies differ and complement each other.
             </p>
         </div>
-        
-        <div style="max-width: 900px; margin: 0 auto;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; overflow: hidden;">
-                <div style="padding: 2rem; background: rgba(59, 130, 246, 0.1);">
-                    <h3 style="color: var(--color-blue-400); font-size: 1.25rem; margin-bottom: 1.5rem; text-align: center;">Traditional SEO</h3>
-                    <ul style="color: var(--color-zinc-300); list-style: none; font-size: 0.95rem;">
-                        <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Goal: Rank on 1st page</li>
-                        <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Target: Search engines</li>
-                        <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Metric: Click-through rate</li>
-                        <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Focus: Keywords & backlinks</li>
-                        <li style="padding: 0.75rem 0;">Output: Blue links</li>
-                    </ul>
+
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; overflow: hidden;">
+                <!-- Table Header -->
+                <div style="display: grid; grid-template-columns: 200px 1fr 1fr; background: rgba(255, 255, 255, 0.03); border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <div style="padding: 1.5rem; font-weight: 700; color: var(--color-white); border-right: 1px solid rgba(255,255,255,0.1);">Feature</div>
+                    <div style="padding: 1.5rem; font-weight: 700; color: var(--color-blue-400); text-align: center; border-right: 1px solid rgba(255,255,255,0.1);">Traditional SEO</div>
+                    <div style="padding: 1.5rem; font-weight: 700; color: var(--color-indigo-400); text-align: center;">AEO (Answer Engine Optimization)</div>
                 </div>
-                <div style="padding: 2rem; background: rgba(99, 102, 241, 0.1);">
-                    <h3 style="color: var(--color-indigo-400); font-size: 1.25rem; margin-bottom: 1.5rem; text-align: center;">Answer Engine Optimization</h3>
-                    <ul style="color: var(--color-zinc-300); list-style: none; font-size: 0.95rem;">
-                        <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Goal: Be the cited source</li>
-                        <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Target: AI systems</li>
-                        <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Metric: AI mentions & citations</li>
-                        <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Focus: Entities & authority</li>
-                        <li style="padding: 0.75rem 0;">Output: Direct answers</li>
-                    </ul>
+
+                <!-- Goal -->
+                <div style="display: grid; grid-template-columns: 200px 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); font-weight: 600; border-right: 1px solid rgba(255,255,255,0.05);">Goal</div>
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); background: rgba(59, 130, 246, 0.05); border-right: 1px solid rgba(255,255,255,0.05);">Drive traffic to website</div>
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); background: rgba(99, 102, 241, 0.05);">Be the cited source</div>
+                </div>
+
+                <!-- Target -->
+                <div style="display: grid; grid-template-columns: 200px 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); font-weight: 600; border-right: 1px solid rgba(255,255,255,0.05);">Target</div>
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); background: rgba(59, 130, 246, 0.05); border-right: 1px solid rgba(255,255,255,0.05);">Search Algorithms</div>
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); background: rgba(99, 102, 241, 0.05);">Answer Engines (AI & Voice)</div>
+                </div>
+
+                <!-- Metric -->
+                <div style="display: grid; grid-template-columns: 200px 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); font-weight: 600; border-right: 1px solid rgba(255,255,255,0.05);">Metric</div>
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); background: rgba(59, 130, 246, 0.05); border-right: 1px solid rgba(255,255,255,0.05);">Rankings & Organic Sessions</div>
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); background: rgba(99, 102, 241, 0.05);">Citations & Visibility</div>
+                </div>
+
+                <!-- Focus -->
+                <div style="display: grid; grid-template-columns: 200px 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); font-weight: 600; border-right: 1px solid rgba(255,255,255,0.05);">Focus</div>
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); background: rgba(59, 130, 246, 0.05); border-right: 1px solid rgba(255,255,255,0.05);">Keywords, Backlinks & Technical</div>
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); background: rgba(99, 102, 241, 0.05);">Entities, Schema & Authority</div>
+                </div>
+
+                <!-- Output -->
+                <div style="display: grid; grid-template-columns: 200px 1fr 1fr;">
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); font-weight: 600; border-right: 1px solid rgba(255,255,255,0.05);">Output</div>
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); background: rgba(59, 130, 246, 0.05); border-right: 1px solid rgba(255,255,255,0.05);">Ten Blue Links</div>
+                    <div style="padding: 1.25rem 1.5rem; color: var(--color-zinc-300); background: rgba(99, 102, 241, 0.05);">Direct Answers</div>
                 </div>
             </div>
         </div>
